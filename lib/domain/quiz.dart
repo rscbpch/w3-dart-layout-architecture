@@ -41,6 +41,7 @@ class Answer {
 
   factory Answer.fromJson(Map<String, dynamic> json, Map<String, Question> questionById) {
     final qid = json['questionId'] as String?;
+
     return Answer(
       id: json['id'] as String,
       question: questionById[qid]!,
@@ -69,7 +70,7 @@ class Player {
   Player({String? id, required this.name, List<Answer>? answers})  : id = uuid.v4(), answers = answers ?? [];
 
   factory Player.fromJson(Map<String, dynamic> json, Map<String, Question> questionById) {
-    final answersJson = json['answers'] as List<dynamic>? ?? [];
+    final answersJson = json['answers'] as List<dynamic>;
     final answers = answersJson.map((a) => Answer.fromJson(a as Map<String, dynamic>, questionById)).toList();
 
     return Player(

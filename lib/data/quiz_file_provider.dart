@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'dart:io';
-
 import '../domain/quiz.dart';
 
 class QuizRepository {
@@ -22,10 +21,6 @@ class QuizRepository {
       print("Error: $e");
       rethrow;
     }
-  }
-
-  void writeQuiz(Quiz quiz) {
-    writePlayers([quiz.player], quiz.questions);
   }
 
   void writePlayers(List<Player> players, List<Question> questions) {
