@@ -22,7 +22,7 @@ class QuizRepository {
       rethrow;
     }
   }
-
+  
   void writePlayers(List<Player> players, List<Question> questions) {
     try {
       final outFile = File(filePath);
@@ -31,9 +31,18 @@ class QuizRepository {
         outDir.createSync(recursive: true);
       }
 
+      final scoringQuiz = Quiz(players: players, questions: questions);
+
+      final List<Map<String, dynamic>> playersJson = players.map((p) {
+        final map = p.toJson();
+        map['points'] = scoringQuiz.getScore(p);
+        map['percentage'] = scoringQuiz.getScoreInPercentage(p);
+        return map;
+      }).toList();
+
       final Map<String, dynamic> data = {
         'questions': questions.map((q) => q.toJson()).toList(),
-        'players': players.map((p) => p.toJson()).toList(),
+        'players': playersJson,
       };
 
       final encoder = JsonEncoder.withIndent('  ');

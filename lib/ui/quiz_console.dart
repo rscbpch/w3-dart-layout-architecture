@@ -6,7 +6,7 @@ class QuizConsole {
 
   QuizConsole({required this.quiz});
 
-  void startQuiz() {
+  void startQuiz(Player player) {
     print('');
     for (var question in quiz.questions) {
       print('Question: ${question.title} - ( ${question.points} points )');
@@ -16,7 +16,7 @@ class QuizConsole {
 
       if (userInput != null && userInput.isNotEmpty) {
         Answer answer = Answer(question: question, answerChoice: userInput);
-        quiz.addAnswer(answer);
+        quiz.addAnswer(player, answer);
       } else {
         print('No answer entered\n');
       }
@@ -24,8 +24,8 @@ class QuizConsole {
   }
 
   void printResult(Player player, Map<String, int> allPlayerScore) {
-    int scoreInPercentage = quiz.getScoreInPercentage();
-    int scoreInPoints = quiz.getScore();
+    int scoreInPercentage = quiz.getScoreInPercentage(player);
+    int scoreInPoints = quiz.getScore(player);
 
     print('');
     print('${player.name}, your score in percentage: $scoreInPercentage %');
