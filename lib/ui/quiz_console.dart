@@ -18,7 +18,7 @@ class QuizConsole {
         Answer answer = Answer(question: question, answerChoice: userInput);
         quiz.addAnswer(player, answer);
       } else {
-        print('No answer entered\n');
+        print('No answer entered. Skipping question.\n');
       }
     }
   }

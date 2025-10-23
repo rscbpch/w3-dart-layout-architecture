@@ -74,9 +74,7 @@ class Player {
   final String name;
   List<Answer> answers;
 
-  Player({String? id, required this.name, List<Answer>? answers})
-      : id = id ?? uuid.v4(),
-        answers = answers ?? [];
+  Player({String? id, required this.name, List<Answer>? answers}) : id = id ?? uuid.v4(), answers = answers ?? [];
 
   factory Player.fromJson(Map<String, dynamic> json, Map<String, Question> questionById) {
     final answersJson = json['answers'] as List<dynamic>? ?? [];
@@ -85,7 +83,6 @@ class Player {
       try {
         answers.add(Answer.fromJson(a as Map<String, dynamic>, questionById));
       } catch (e) {
-        // skip invalid answer but warn
         print('Warning: skipping invalid answer in player ${json['name'] ?? json['id']}: $e');
       }
     }
