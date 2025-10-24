@@ -26,10 +26,6 @@ class QuizRepository {
   void writePlayers(List<Player> players, List<Question> questions) {
     try {
       final outFile = File(filePath);
-      final outDir = outFile.parent;
-      if (!outDir.existsSync()) {
-        outDir.createSync(recursive: true);
-      }
 
       final scoringQuiz = Quiz(players: players, questions: questions);
 

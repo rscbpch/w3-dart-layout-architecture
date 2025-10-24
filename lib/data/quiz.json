@@ -25,58 +25,22 @@
   ],
   "players": [
     {
-      "id": "f5052f52-4b97-461b-b8f8-c237a9e1ab24",
-      "name": "pich",
+      "id": "4cffdb19-91b0-42b1-a693-51863d2ee240",
+      "name": "gab",
       "answers": [
         {
-          "id": "f70cfe27-0da0-43dd-8cb1-db901a6ec7b7",
+          "id": "4a664d2c-60f1-405b-bfdd-d36d25be57fb",
           "questionId": "dfcad152-2d4b-42f9-aee5-2ad1418c851f",
           "answerChoice": "Paris"
         },
         {
-          "id": "cff0768b-0e94-4c9a-9243-37e8d1a3f7bd",
+          "id": "9742a8ad-5a1a-49ff-9c0d-07ad4f040cc1",
           "questionId": "ed0650cf-416b-4e48-8103-61ae5c7f99d7",
           "answerChoice": "4"
         }
       ],
       "points": 100,
       "percentage": 100
-    },
-    {
-      "id": "3026adec-cb59-4185-b6da-4489456e208a",
-      "name": "poy",
-      "answers": [
-        {
-          "id": "832b68e4-a5b2-4246-8032-ddcca6bee9f3",
-          "questionId": "dfcad152-2d4b-42f9-aee5-2ad1418c851f",
-          "answerChoice": "Paris"
-        },
-        {
-          "id": "71d78c14-ab19-4eb8-b9a3-64fb652e1b02",
-          "questionId": "ed0650cf-416b-4e48-8103-61ae5c7f99d7",
-          "answerChoice": "5"
-        }
-      ],
-      "points": 60,
-      "percentage": 50
-    },
-    {
-      "id": "70c1576e-07bb-41f9-b49d-480b83564656",
-      "name": "bro",
-      "answers": [
-        {
-          "id": "de2b0be4-b009-4e91-b19a-75201467fa48",
-          "questionId": "dfcad152-2d4b-42f9-aee5-2ad1418c851f",
-          "answerChoice": "paris"
-        },
-        {
-          "id": "b4b9dc06-8fe9-481c-9278-5de98e8eb48a",
-          "questionId": "ed0650cf-416b-4e48-8103-61ae5c7f99d7",
-          "answerChoice": "4"
-        }
-      ],
-      "points": 40,
-      "percentage": 50
     }
   ]
 }
